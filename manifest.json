@@ -8,16 +8,15 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["changeDisplay.js"]
+      "js":["/ContentScript/changeDisplay.js"]
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [],
   "permissions": ["storage"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "/PopUp/popup.html",
     "default_icon": {
       "16": "/images/get_started16.png",
       "32": "/images/get_started32.png",
