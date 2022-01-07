@@ -15,17 +15,17 @@
   <body>
     <div class="main">
       <div class="row">
-        <div class ="col">
-          <p class="subheader">Dark mode </p>
-          <label class="toggleSwitch">
+        <div class="col-4">
+          <p class="darkmode">Dark mode </p>
+        </div>
+        <div class="col-2">
+          <label class="darkSwitch">
             <input type="checkbox" class="checkbox" id="darkModeCheckBox">
             <span class="slider"></span>
           </label>
         </div>
-        <div class ="col">
-          <div class="settings">
-            <button id="changeColor">X</button>
-          </div>
+        <div class="col-4">
+          <a href="#" class="close"></a>        
         </div>
       </div>
       <div class="row">
@@ -47,9 +47,15 @@
         <div class="dropdownMenu">
           <select class="form-select" aria-label="font-select">
             <option selected>Choose a preferred font here!</option>
-            <option value="1">Helvetica</option>
-            <option value="2">Roboto</option>
+            <option value="1">Arial</option>
+            <option value="2">Comic Sans</option>
             <option value="3">Calbri</option>
+            <option value="4">Verdana</option>
+            <option value="5">Tahoma</option>
+            <option value="6">Open Sans</option>
+            <option value="7">Roboto</option>
+            <option value="8">Helvetica</option>
+
           </select>
         </div>
       </div>
@@ -75,6 +81,20 @@
           <a>25%</a>
           <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
           <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Font Color</p>
+        <div class="fontcolor">
+          <a>(pick a color and watch the magic happen!)</a>
+          <input class="form-check-input" type="radio" name="radio" id="radio1" value="#000000" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio2" value="#332288" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio3" value="#785EF0" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio4" value="#0C7BDC" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio5" value="#56B4E9" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio6" value="#DC267F" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio7" value="#FE6100" aria-label="...">
+          <input class="form-check-input" type="radio" name="radio" id="radio8" value="#FFC20A" aria-label="...">
         </div>
       </div>
       <div class="row">
@@ -105,7 +125,7 @@
       <h4 class="header"> Feedback </h4>
     </div>
     <div class ="row">
-      <form>
+      <form class="feedback">
         <div class="mb-3">
           <input type="text" class="form-control" placeholder="  Your Name" aria-describedby="emailHelp"><br>
           <input type="text" class="form-control" placeholder="  Your Email">
@@ -117,6 +137,9 @@
       </form>
     </div>
   </div>
+    <footer>
+      <p>Made with 💖 by Team GooglyEyes</p>
+    </footer>
   </body>
   <script src="popup.js"></script>
   <script src="../contentScript/changeDisplay.js"></script>
