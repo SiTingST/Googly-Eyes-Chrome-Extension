@@ -8,7 +8,6 @@
       "matches":[
         "<all_urls>"
       ],
-      "css":["changeDisplay.css"],
       "js":["changeDisplay.js"]
     }
   ],
