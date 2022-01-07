@@ -8,7 +8,7 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["changeDisplay.js"]
+      "js":["contentScript/changeDisplay.js"]
     }
   ],
   "background": {
