@@ -25,3 +25,5 @@ let media = document.querySelectorAll("img, pictures, video");
 media.forEach((mediaItem)=>{
 	mediaItem.style.filter = "invert(0) hue-rotate(0deg)"
 })
+
+// document.querySelector("html").style.filter=" brightness(120%)";
