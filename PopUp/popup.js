@@ -5,11 +5,11 @@ function feedbackResponse() {
 // Zoom Font
 const zoomFontSlider = document.getElementById("zoomFont");
 zoomFontSlider.addEventListener("input", (e) => {
-    let size = e.target.value + "%";
+    let size = e.target.value;
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.executeScript(
-          tabs[0].id,
-          {code: 'document.body.style.fontSize = "' + size + '";'});
+        chrome.tabs.sendMessage(
+            tabs[0].id,
+            size);
     });
 });
 
@@ -20,18 +20,18 @@ darkModeToggleButton.addEventListener("click", () => {
 
     if(document.querySelector('#darkModeCheckBox:checked')) {
         console.log("dark")
+        let mode = "dark";
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.executeScript(
+            chrome.tabs.sendMessage(
                 tabs[0].id,
-                { file:"./contentScript/darkMode.js"});
+                mode);
         });
     } else{
+        let mode = "light";
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            console.log("light")
-
-            chrome.tabs.executeScript(
+            chrome.tabs.sendMessage(
                 tabs[0].id,
-                { file:"./contentScript/lightMode.js"});
+                mode);
         });
         // document.querySelector("html").style.filter="invert(0) hue-rotate(0deg)";
     
@@ -77,25 +77,25 @@ constrastSlider.addEventListener("input", (e) => {
 
 
 
- fontColorButton = document.querySelector('#fontColorRadio')
+fontColorButton = document.querySelector('#fontColorRadio')
 
- const fontColorRadioButton = document.getElementsByName("fontColorRadio");
- var fontColor;
+const fontColorRadioButton = document.getElementsByName("fontColorRadio");
+var fontColor;
 
 
- for(i=0; i<fontColorRadioButton.length; i++){
-    fontColorRadioButton[i].addEventListener("change", (e) => {
-        let colorSizeSelect = e.target.value;
-        alert(this.colorSizeSelect);
+for(i=0; i<fontColorRadioButton.length; i++){
+   fontColorRadioButton[i].addEventListener("change", (e) => {
+       let colorSizeSelect = e.target.value;
+       console.log(colorSizeSelect);
 
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(
-                tabs[0].id,
-                colorSizeSelect);
-          });
+       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+           chrome.tabs.sendMessage(
+               tabs[0].id,
+               colorSizeSelect);
+         });
 
-        
-    });
+       
+   });
 }
 //  fontColorRadioButton.addEventListener("click", () => {
 
@@ -116,5 +116,20 @@ fontType.addEventListener("change", (e) => {
             tabs[0].id,
             fontSelect);
       });
+});
+
+
+const resetButton = document.getElementById("reset1");
+resetButton.addEventListener("click", (e) => {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.reload(
+            tabs[0].id);
+      });
+});
+
+
+const closeButton = document.getElementById("closePop");
+closeButton.addEventListener("click", (e) => {
+    window.close()
 });
 
