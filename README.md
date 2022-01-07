@@ -1,4 +1,4 @@
-![GooglyEyes](https://user-images.githubusercontent.com/48002577/148604463-05c1bd5c-f8aa-46c6-8f33-d4fbd335c6c3.png)
+![GooglyEyes](https://user-images.githubusercontent.com/48002577/148604574-3738ca2c-7436-4e18-8d70-73344d57711b.png)
 
 # Welcome to the GooglyEyes Chrome Extension
 
