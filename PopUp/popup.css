@@ -120,20 +120,6 @@ input:checked + .slider:before {
   visibility: hidden;
 }
 
-input[type=text] {
-  width: 100%;
-  padding: 1% 2%; 
-  margin: 6% 0 0 2%;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-  
-#feedback{
-  height: 60%;
-}
-
 .btn{
   width: 92%;
   background-color: #3652E3;
