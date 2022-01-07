@@ -18,8 +18,8 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["contentScript/reading-line.js", "contentScript/changeFontColor.js"],
-      "css": ["contentScript/reading-line.css"]
+      "js":["contentScript/reading-line.js", "contentScript/changeFont.js", "contentScript/changeFontColor.js"],
+      "css": ["contentScript/reading-line.css", "contentScript/styles.css"]
     }
   ],
   "background": {

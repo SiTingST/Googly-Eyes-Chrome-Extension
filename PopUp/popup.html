@@ -38,14 +38,14 @@
         <p class="subheader">Zoom Font</p>
         <div class="scaleBar">
           <a>25%</a>
-          <input type="range" class="form-range" min="25" max="250" id="zoomFont">
+          <input type="range" class="form-range" min="25" max="250" value="100" id="zoomFont">
           <a>250%</a>
         </div>
       </div>
       <div class="row">
         <p class="subheader">Font Type</p>
         <div class="dropdownMenu">
-          <select class="form-select" aria-label="font-select">
+          <select class="form-select" id="fontselectType" aria-label="font-select">
             <option selected>Choose a preferred font here!</option>
             <option value="1">Arial</option>
             <option value="2">Comic Sans</option>
@@ -62,9 +62,9 @@
       <div class="row">
         <p class="subheader">Letter Spacing | A |</p>
         <div class="scaleBar">
-          <a>25%</a>
-          <input type="range" class="form-range" min="0" max="10" id="letterSlider">
-          <a>250%</a>
+          <a>0px</a>
+          <input type="range" class="form-range" min="0" max="10" value="0" id="letterSlider">
+          <a>10px</a>
         </div>
       </div>
       <div class="row">
@@ -116,10 +116,11 @@
         <p class="subheader"> Text to speech</p>
       </div>
       <div class ="col">
-      <label class="toggleSwitch">
-        <input type="checkbox" class="checkbox">
-        <span class="slider"></span>
-      </label>
+        <div class="tooltip">
+          <p>Hi</p>
+          <span class="tooltiptext">Tooltip text</span>
+        </div>
+      </div>
     </div>
     <div class ="row">
       <h4 class="header"> Feedback </h4>
