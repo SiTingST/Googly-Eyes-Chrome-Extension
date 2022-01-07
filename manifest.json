@@ -21,8 +21,8 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["contentScript/reading-line.js", "contentScript/changeDisplay.js"],
-      "css": ["contentScript/reading-line.css"]
+      "js":["reading-line.js", "contentScript/changeDisplay.js"],
+      "css": ["reading-line.css", "contentScript/styles.css"]
     }
   ],
   "permissions": [
