@@ -4,7 +4,20 @@
     <link rel="stylesheet" href="button.css">
   </head>
   <body>
-    <button id="changeColor"></button>
+    <h3>Zoom Font</h3>
+    <div class="slidecontainer">
+      <span>25%</span>
+      <input type="range" min="25" max="250" value="100" step="25" class="slider" id="fontSizeSlider">
+      <span>250%</span>
+    </div>
+    <h3>Text to Speech</h3>
+    <textarea class="form-control bg-dark text-light" cols="30" rows="10" placeholder="Type here..."></textarea>
+    <div>
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="resume">Resume</button>
+      <button id="cancel">Cancel</button>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
