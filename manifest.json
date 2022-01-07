@@ -13,12 +13,8 @@
     "default_title": "Dyslexia ruler activated",
     "default_popup": "/PopUp/popup.html"
   },
-  "permissions": [ 
-    "<all_urls>",
-    "tabs",
-    "storage"],
   "background": {
-    "scripts": ["reading-line-bg.js"]
+    "scripts": ["narrate.js", "background.js, reading-line-bg.js"]
   },
   "content_scripts":[
     {
@@ -28,5 +24,13 @@
       "js":["contentScript/reading-line.js", "contentScript/changeDisplay.js"],
       "css": ["contentScript/reading-line.css"]
     }
+  ],
+  "permissions": [
+    "storage", 
+    "activeTab", 
+    "contextMenus", 
+    "tts",
+    "http://*/",
+		"https://*/"
   ]
 }
