@@ -4,7 +4,7 @@
 
 // for (items of allElements){
 // 	items.style["color"] = '#00FF00';
-// }
+// // }
 
 //Dark mode
 

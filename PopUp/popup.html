@@ -17,8 +17,17 @@
   <body>
     <div class="main">
       <div class="row">
-        <div class="settings">
-          <button id="changeColor">X</button>
+        <div class ="col">
+          <p class="subheader">Dark mode </p>
+          <label class="toggleSwitch">
+            <input type="checkbox" class="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class ="col">
+          <div class="settings">
+            <button id="changeColor">X</button>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -33,6 +42,17 @@
           <a>25%</a>
           <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
           <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Font Type</p>
+        <div class="dropdownMenu">
+          <select class="form-select" aria-label="font-select">
+            <option selected>Choose a preferred font here!</option>
+            <option value="1">Helvetica</option>
+            <option value="2">Roboto</option>
+            <option value="3">Calbri</option>
+          </select>
         </div>
       </div>
       <div class="row">
@@ -67,9 +87,9 @@
           <p class="subheader"> Dyslexia Ruler</p>
         </div>
         <div class ="col">
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
+        <label class="toggleSwitch">
+          <input type="checkbox" class="checkbox">
+          <span class="slider"></span>
         </label>
       </div>
     </div>
@@ -78,20 +98,24 @@
         <p class="subheader"> Text to speech</p>
       </div>
       <div class ="col">
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
+      <label class="toggleSwitch">
+        <input type="checkbox" class="checkbox">
+        <span class="slider"></span>
       </label>
     </div>
     <div class ="row">
       <h4 class="header"> Feedback </h4>
     </div>
     <div class ="row">
-      <form action="tinglim89@gmail.com" method="post" enctype="text/plain" >
-        <input type="text" name="name"  placeholder="  Your Name"><br>
-        <input type="text" name="email"  placeholder="  Your Email"><br>
-        <input type="text" name="feedback"  id ="feedback" placeholder="  Feedback"><br>
-        <input type="submit" value="Submit">
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="  Your Name" aria-describedby="emailHelp"><br>
+          <input type="text" class="form-control" placeholder="  Your Email">
+        </div>
+        <div class ="mb-1">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="  Your Feedback"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
