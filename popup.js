@@ -1,61 +1,61 @@
-// document.addEventListener('mouseup', event => {  
-//   if(window.getSelection().toString().length){
-//      let exactText = window.getSelection().toString();     
-//      console.log(exactText);   
-//   }
-// });
 
-fontSizeSlider.addEventListener("input", async (e) => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  let size = e.target.value;
-  chrome.storage.sync.set({ size });
+function Init() {
+	var paused = false;
+	var Render = function() {
+    document.getElementById("pauseResume").innerText = paused ? "Resume" : "Pause";
+  };
 
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: changePageFontSize,
-  });
-});
+	document.getElementById("start").addEventListener("click", function(e) { 
+		chrome.tabs.query({ active: true }, function(tabs) {
+			tabs.forEach(function(tab) {
+				chrome.tabs.executeScript(tab.id, {file: "narrator.js" }, function(results) {
+					if(results && results.every(function(o) { return o; })) {
+						chrome.tabs.sendMessage(tab.id, { command: "readText" });
+					}
+				});
+			});
+		});
+	});
 
-function changePageFontSize() {
-  chrome.storage.sync.get("size", ({ size }) => {
-    document.body.style.fontSize = size + "%";
-  });
+	document.getElementById("stop").addEventListener("click", function(e) { 
+		chrome.tts.stop();
+		paused = false;
+		Render();
+	});
+	
+	document.getElementById("pauseResume").addEventListener("click", function(e) { 		
+		chrome.tts.isSpeaking(function(isSpeaking) {
+			console.log("Chrome TTS: " + (isSpeaking ? "is speaking" : "is not speaking"));
+			if(isSpeaking && !paused) {
+				chrome.tts.pause();
+				paused = true; 
+				console.log("Paused");
+			} else {
+				chrome.tts.resume();
+				paused = false;
+				console.log("Resumed");
+			}			
+			Render();
+		});
+	});
+
+	chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+		if (request.utterance) {
+		  narrate(request.utterance, function() { 
+        sendResponse("Narrate: OK"); 
+      });
+		}
+		Render();
+	});
 }
 
-let speech = new SpeechSynthesisUtterance();
+document.addEventListener("DOMContentLoaded", Init);
 
-// Set Speech Language
-speech.lang = "en";
-
-let voices = []; // global array of available voices
-
-window.speechSynthesis.onvoiceschanged = () => {
-  // Get List of Voices
-  voices = window.speechSynthesis.getVoices();
-
-  // Initially set the First Voice in the Array.
-  speech.voice = voices[0];
-}
-
-start.addEventListener("click", () => {
-  // Set the text property with the value of the textarea
-  speech.text = document.querySelector("textarea").value;
-
-  // Start Speaking
-  window.speechSynthesis.speak(speech);
-});
-
-pause.addEventListener("click", () => {
-  // Pause the speechSynthesis instance
-  window.speechSynthesis.pause();
-});
-
-resume.addEventListener("click", () => {
-  // Resume the paused speechSynthesis instance
-  window.speechSynthesis.resume();
-});
-
-cancel.addEventListener("click", () => {
-  // Cancel the speechSynthesis instance
-  window.speechSynthesis.cancel();
+document.getElementById("fontSizeSlider").addEventListener("input", (e) => {
+  let size = e.target.value + "%";
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.executeScript(
+        tabs[0].id,
+        {code: 'document.body.style.fontSize = "' + size + '";'});
+  });
 });
