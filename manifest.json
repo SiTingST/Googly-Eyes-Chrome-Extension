@@ -21,7 +21,7 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["reading-line.js", "contentScript/changeDisplay.js", "contentScript/changeFont.js"],
+      "js":["reading-line.js", "contentScript/changeFont.js"],
       "css": ["reading-line.css", "contentScript/styles.css"]
     }
   ],
