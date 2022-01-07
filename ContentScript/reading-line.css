@@ -1,0 +1,10 @@
+#ReadingLine {
+    position: fixed;
+    height: 24px;
+    background: orange;
+    opacity: 50%;
+}
+
+#ReadingLine.hidden {
+    display: none;
+}
