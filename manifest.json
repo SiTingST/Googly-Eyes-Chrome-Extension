@@ -6,6 +6,7 @@
   "background": {
     "background": "background.js"
   },
+  "content_scripts": [],
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
