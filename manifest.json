@@ -2,20 +2,20 @@
   "name": "Googly Eyes",
   "description": "Hack & Roll 2022",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "content_scripts":[
     {
       "matches":[
         "<all_urls>"
       ],
-      "js":["contentScript/changeDisplay.js"]
+      "js":["contentScript/darkMode.js"]
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
   "permissions": ["storage"],
-  "action": {
+  "browser_action": {
     "default_popup": "/PopUp/popup.html",
     "default_icon": {
       "16": "/images/get_started16.png",
