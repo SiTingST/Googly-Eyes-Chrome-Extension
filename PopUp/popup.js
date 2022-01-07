@@ -2,7 +2,7 @@ function feedbackResponse() {
     return alert('Thank you for your response!')
 }
 
-document.getElementById("Zoom Font").addEventListener("input", (e) => {
+document.getElementById("zoomFont").addEventListener("input", (e) => {
     let size = e.target.value + "%";
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.executeScript(
