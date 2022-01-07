@@ -18,16 +18,18 @@
       "matches":[
         "<all_urls>"
       ],
-      "js":["contentScript/reading-line.js", "contentScript/darkMode.js"],
+      "js":["contentScript/reading-line.js", "contentScript/changeFontColor.js"],
       "css": ["contentScript/reading-line.css"]
     }
   ],
   "background": {
-    "scripts": ["narrate.js", "background.js"]
+    "scripts": ["narrate.js", "background.js", "PopUp/popup.js"],
+    "persistent": true
   },
   "permissions": [
     "storage", 
-    "activeTab", 
+    "activeTab",
+    "tabs", 
     "contextMenus", 
     "tts",
     "http://*/",
