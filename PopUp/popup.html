@@ -15,16 +15,67 @@
     
   </style>
   <body>
-    <div class="header">
-      <button id="changeColor">X</button>
-    </div>
-    <!-- <button id="changeColor"></button> -->
-    <div class="row">
-      <h4 class="header"> Advanced Tool </h4>
+    <div class="main">
+      <div class="row">
+        <div class="settings">
+          <button id="changeColor">X</button>
+        </div>
+      </div>
+      <div class="row">
+        <img id="banner" src="assets/welcome.png">
+      </div>
+      <div class="row">
+        <h4 class="header">General Tools</h1>
+      </div>
+      <div class="row">
+        <p class="subheader">Zoom Font</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Letter Spacing | A |</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Brightness</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Contrast</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <h4 class="header"> Advanced Tool </h4>
+      </div>
+      <div class ="row">
+        <div class ="col">
+          <p class="subheader"> Dyslexia Ruler</p>
+        </div>
+        <div class ="col">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
     </div>
     <div class ="row">
       <div class ="col">
-        <p class="subheader"> Dyslexia Ruler</p>
+        <p class="subheader"> Text to speech</p>
       </div>
       <div class ="col">
       <label class="switch">
@@ -32,29 +83,18 @@
         <span class="slider round"></span>
       </label>
     </div>
-  </div>
-  <div class ="row">
-    <div class ="col">
-      <p class="subheader"> Text to speech</p>
+    <div class ="row">
+      <h4 class="header"> Feedback </h4>
     </div>
-    <div class ="col">
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
+    <div class ="row">
+      <form action="tinglim89@gmail.com" method="post" enctype="text/plain" >
+        <input type="text" name="name"  placeholder="  Your Name"><br>
+        <input type="text" name="email"  placeholder="  Your Email"><br>
+        <input type="text" name="feedback"  id ="feedback" placeholder="  Feedback"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
-  <div class ="row">
-    <h4 class="header"> Feedback </h4>
-  </div>
-  <div class ="row">
-    <form action="tinglim89@gmail.com" method="post" enctype="text/plain" >
-      <input type="text" name="name"  placeholder="  Your Name"><br>
-      <input type="text" name="email"  placeholder="  Your Email"><br>
-      <input type="text" name="feedback"  id ="feedback" placeholder="  Feedback"><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</div>
   </body>
 
 </html>

@@ -13,13 +13,50 @@
     transform: rotate(0.06deg);
 }
 
-body {
-    width: 300px;
-    height: 500px;
-    max-height: 500px;
+.row {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 6%;
+}
+
+body{
+    background: none;
+}
+
+.main {
+    width: 350px;
+    /* max-height: 500px; */
     background: #FFFFFF;
     /* border-radius: 29px; */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.75);
+    border-radius: 29px;
+}
+
+#banner {
+    width: 98%;
+    padding-left: 2%;
+    padding-right: 0%;
+    padding-top: 10px;
+}
+
+a {
+    padding: 0%;
+    margin-top: 0%;
+}
+
+.form-range {
+    width: 70%;
+    text-align: center;
+    padding-top: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.scaleBar {
+    text-align: center;
+    padding-top: 0%;
+    margin-top: 0%;
 }
 
 .header{
@@ -118,4 +155,4 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
