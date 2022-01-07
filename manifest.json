@@ -1,6 +1,6 @@
 {
-  "name": "HNR2022",
-  "description": "Build an Extension!",
+  "name": "Googly Eyes",
+  "description": "Hack & Roll 2022",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
