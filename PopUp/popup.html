@@ -14,12 +14,52 @@
     
   </style>
   <body>
-    <div class="header">
-      <button id="changeColor">X</button>
+    <div class="main">
+      <div class="row">
+        <div class="settings">
+          <button id="changeColor">X</button>
+        </div>
+      </div>
+      <div class="row">
+        <img id="banner" src="assets/welcome.png">
+      </div>
+      <div class="row">
+        <h4 class="header">General Tools</h1>
+      </div>
+      <div class="row">
+        <p class="subheader">Zoom Font</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Letter Spacing | A |</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Brightness</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <div class="row">
+        <p class="subheader">Contrast</p>
+        <div class="scaleBar">
+          <a>25%</a>
+          <input type="range" class="form-range" min="25" max="250" id="Zoom Font">
+          <a>250%</a>
+        </div>
+      </div>
+      <script src="popup.js"></script>
     </div>
-    <h1>Hello world</h1>
-    <!-- <button id="changeColor"></button> -->
-    <script src="popup.js"></script>
   </body>
 </html>
 
