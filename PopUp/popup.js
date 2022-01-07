@@ -33,3 +33,14 @@ darkModeToggleButton.addEventListener("click", () => {
     }
 
 })
+
+const fontType = document.getElementById("fontselectType");
+fontType.addEventListener("change", (e) => {
+    let fontSelect = e.target.value;
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(
+            tabs[0].id,
+            fontSelect);
+      });
+});
+

@@ -10,21 +10,27 @@
 console.log("hey poepoe")
 console.log(document.querySelector('#darkModeCheckBox:checked'))
 
-if(document.querySelector('#darkModeCheckBox:checked')) {
-	document.querySelector("html").style.filter="invert(1) hue-rotate(180deg)";
+document.querySelector("html").style.filter="invert(1) hue-rotate(180deg)";
 	let media = document.querySelectorAll("img, pictures, video");
 	media.forEach((mediaItem)=>{
 	 	mediaItem.style.filter = "invert(1) hue-rotate(180deg)"
 	 })
-} else{
-	document.querySelector("html").style.filter="invert(0) hue-rotate(0deg)";
 
-	let media = document.querySelectorAll("img, pictures, video");
+// if(document.querySelector('#darkModeCheckBox:checked')) {
+// 	document.querySelector("html").style.filter="invert(1) hue-rotate(180deg)";
+// 	let media = document.querySelectorAll("img, pictures, video");
+// 	media.forEach((mediaItem)=>{
+// 	 	mediaItem.style.filter = "invert(1) hue-rotate(180deg)"
+// 	 })
+// } else{
+// 	document.querySelector("html").style.filter="invert(0) hue-rotate(0deg)";
+
+// 	let media = document.querySelectorAll("img, pictures, video");
 	
-	media.forEach((mediaItem)=>{
-		mediaItem.style.filter = "invert(0) hue-rotate(0deg)"
-	})
-}
+// 	media.forEach((mediaItem)=>{
+// 		mediaItem.style.filter = "invert(0) hue-rotate(0deg)"
+// 	})
+// }
 
 // 
 
