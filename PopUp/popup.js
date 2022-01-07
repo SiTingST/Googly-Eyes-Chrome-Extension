@@ -5,7 +5,7 @@ function feedbackResponse() {
 // Zoom Font
 const zoomFontSlider = document.getElementById("zoomFont");
 zoomFontSlider.addEventListener("input", (e) => {
-    let size = e.target.value;
+    let size = e.target.value + "%";
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.sendMessage(
             tabs[0].id,

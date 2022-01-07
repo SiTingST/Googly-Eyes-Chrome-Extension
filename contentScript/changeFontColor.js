@@ -4,7 +4,7 @@ function changeFontColor(message, sender, sendResponse) {
     console.log(typeof message);
     colorNo = message
     allElements = document.querySelectorAll('*');
-    switch(fontNo) {
+    switch(colorNo) {
     case "1":
         for (items of allElements) {
             items.style["color"] = '#000000';

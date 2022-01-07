@@ -4,11 +4,12 @@ console.log("font size script activated!")
 chrome.runtime.onMessage.addListener(changeFontSize);
 
 function changeFontSize(message, sender, sendResponse) {
-    fontSize = parseInt(message)
+    fontSize = message
+    len = fontSize.length
 
-    if (fontSize >=25 || fontSize <= 250){
+    if (fontSize.charAt(len-1) == "%"){
         console.log("Running")
-        
+
         fontSize = fontSize + "%"
         allElements = document.querySelectorAll('*');
         for (items of allElements) {
