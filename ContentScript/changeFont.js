@@ -3,53 +3,53 @@ console.log("change Font activated!!")
 chrome.runtime.onMessage.addListener(changeFont);
 
 function changeFont(message, sender, sendResponse) {
-    console.log(typeof message);
+    // console.log(typeof message);
     fontNo = message
     allElements = document.querySelectorAll('*');
     switch(fontNo) {
-    case "1":
+    case "a":
         // Arial
         for (items of allElements) {
             items.style["font-family"] = 'Arial';
         }
         break;
-    case "2":
+    case "b":
         // Comic Sans
         for (items of allElements) {
             items.style["font-family"] = 'Comic Sans';
         }
         break;
-    case "3":
+    case "c":
         // Calibri
         for (items of allElements){
             items.style["font-family"] = 'Calibri';
         }
         break;
-    case "4":
+    case "d":
         // Verdana
         for (items of allElements){
             items.style["font-family"] = 'Verdana';
         }
         break;
-    case "5":
+    case "e":
         // Tahoma
         for (items of allElements){
             items.style["font-family"] = 'Tahoma';
         }
         break;
-    case "6":
+    case "f":
         // Open Sans
         for (items of allElements){
             items.style["font-family"] = 'Open Sans';
         }
         break;
-    case "7":
+    case "g":
         // Roboto 
         for (items of allElements){
             items.style["font-family"] = 'Roboto';
         }
         break;
-    case "8":
+    case "h":
         // Helvetica
         for (items of allElements){
             items.style["font-family"] = 'Helvetica';
@@ -59,5 +59,3 @@ function changeFont(message, sender, sendResponse) {
         break;
     }
 }
-
-// changeFont(6);

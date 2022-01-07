@@ -25,7 +25,7 @@
           </label>
         </div>
         <div class="col-4">
-          <a href="#" class="close"></a>        
+          <a href="#" class="close" id="closePop"></a>        
         </div>
       </div>
       <div class="row">
@@ -47,14 +47,14 @@
         <div class="dropdownMenu">
           <select class="form-select" id="fontselectType" aria-label="font-select">
             <option selected>Choose a preferred font here!</option>
-            <option value="1">Arial</option>
-            <option value="2">Comic Sans</option>
-            <option value="3">Calbri</option>
-            <option value="4">Verdana</option>
-            <option value="5">Tahoma</option>
-            <option value="6">Open Sans</option>
-            <option value="7">Roboto</option>
-            <option value="8">Helvetica</option>
+            <option value="a">Arial</option>
+            <option value="b">Comic Sans</option>
+            <option value="c">Calbri</option>
+            <option value="d">Verdana</option>
+            <option value="e">Tahoma</option>
+            <option value="f">Open Sans</option>
+            <option value="g">Roboto</option>
+            <option value="h">Helvetica</option>
 
           </select>
         </div>
@@ -85,8 +85,8 @@
       </div>
       <div class="row">
         <p class="subheader">Font Color</p>
+        <p class="colorpicker">(pick a color and watch the magic happen!)</p>
         <div class="fontcolor">
-          <a>(pick a color and watch the magic happen!)</a>
           <input class="form-check-input" type="radio" name="fontColorRadio" id="radio1" value="1" aria-label="...">
           <input class="form-check-input" type="radio" name="fontColorRadio" id="radio2" value="2" aria-label="...">
           <input class="form-check-input" type="radio" name="fontColorRadio" id="radio3" value="3" aria-label="...">
@@ -98,30 +98,29 @@
         </div>
       </div>
       <div class="row">
+        <div class="resetbtn">
+          <button type="button" class="btn btn-secondary" id="reset1">
+            Reset
+          </button>
+        </div>
+      </div>
+      <div class="row">
         <h4 class="header"> Advanced Tool </h4>
       </div>
       <div class ="row">
         <div class ="col">
-          <p class="subheader"> Dyslexia Ruler</p>
+          <p class="subheader">Text to speech</p>
         </div>
         <div class ="col">
-        <label class="toggleSwitch">
-          <input type="checkbox" class="checkbox">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-    <div class ="row">
-      <div class ="col">
-        <p class="subheader"> Text to speech</p>
-      </div>
-      <div class ="col">
-        <div class="tooltip">
-          <p>Hi</p>
-          <span class="tooltiptext">Tooltip text</span>
+          <div class="help-tip">
+            <p>Simply highlight a chunk of text on your webpage, right-click and select the || read selected text option || to enjoy our text to speech feature!</p>
+          </div>
         </div>
       </div>
+      <div class ="row">
+          <p class="subheader">Dyslexia Ruler (Feature coming soon!)</p>
     </div>
+    
     <div class ="row">
       <h4 class="header"> Feedback </h4>
     </div>
@@ -143,6 +142,6 @@
     </footer>
   </body>
   <script src="popup.js"></script>
-  <script src="../contentScript/changeDisplay.js"></script>
+  <!-- <script src="../contentScript/changeDisplay.js"></script> -->
 </html>
 
