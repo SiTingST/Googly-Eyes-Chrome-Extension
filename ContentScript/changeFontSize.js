@@ -10,7 +10,7 @@ function changeFontSize(message, sender, sendResponse) {
     if (fontSize.charAt(len-1) == "%"){
         console.log("Running")
 
-        fontSize = fontSize + "%"
+        fontSize = fontSize
         allElements = document.querySelectorAll('*');
         for (items of allElements) {
             items.style["fontSize"] = fontSize;
